@@ -1,0 +1,241 @@
+/* Preview.css */
+:root {
+  --primary: #2c3e50;
+  --secondary: #3498db;
+  --light: #ecf0f1;
+  --dark: #2c3e50;
+  --gray: #95a5a6;
+  --white: #ffffff;
+}
+
+.cv-container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.cv-container .sidebar {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 25px 15px;
+}
+
+.cv-container .profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary);
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.cv-container .sidebar-section {
+  margin-bottom: 20px;
+}
+
+.cv-container .sidebar-title {
+  color: var(--secondary);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.cv-container .sidebar-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+.cv-container .contact-list {
+  list-style: none;
+  font-size: 12px;
+}
+
+.cv-container .contact-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cv-container .contact-list svg {
+  margin-right: 8px;
+  color: var(--secondary);
+  width: 16px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.cv-container .skills-list {
+  list-style: none;
+  font-size: 12px;
+}
+
+.cv-container .skills-list li {
+  margin-bottom: 8px;
+}
+
+.cv-container .skill-name {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.cv-container .skill-bar {
+  height: 4px;
+  background-color: #34495e;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.cv-container .skill-level {
+  height: 100%;
+  background-color: var(--secondary);
+}
+
+/* Main Content Styles */
+.cv-container .main-content {
+  padding: 25px;
+}
+
+.cv-container .name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 3px;
+  color: var(--primary);
+}
+
+.cv-container .title {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.cv-container .section {
+  margin-bottom: 20px;
+}
+
+.cv-container .section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 12px;
+  position: relative;
+  padding-bottom: 5px;
+  color:#db5b34;
+}
+
+.cv-container .section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+.cv-container h4{
+  margin-bottom: -10px;
+}
+
+.cv-container .experience-item, .education-item {
+  margin-bottom: 15px;
+}
+
+.cv-container .item-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.cv-container .company, .degree {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cv-container .date {
+  color: var(--gray);
+  font-size: 12px;
+}
+
+.cv-container .position, .university {
+  font-style: italic;
+  margin-bottom: 5px;
+  color: var(--primary);
+  font-size: 13px;
+}
+
+.cv-container .description {
+  color: #555;
+  font-size: 12px;
+}
+
+.cv-container .technologies {
+  font-size: 12px;
+  color: var(--gray);
+  margin-bottom: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 380px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  
+  .cv-container{
+  grid-template-columns: 150px 1fr;
+
+
+  }
+
+  .cv-container .contact-list li {
+  margin-bottom: 10px;
+  display: flex;
+  margin-left: -50px;
+}
+  
+ 
+  
+  .sidebar-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .contact-list li {
+    justify-content: center;
+  }
+  
+  .main-content {
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .cv-container {
+    margin: 10px;
+  }
+   
+  
+  .item-header {
+    flex-direction: column;
+  }
+  
+  .date {
+    margin-top: 3px;
+  }
+}
