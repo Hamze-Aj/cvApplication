@@ -190,14 +190,14 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 380px) {
+@media (max-width: 400px) {
   .cv-container {
     grid-template-columns: 1fr;
     max-width: 600px;
   }
   
   .cv-container{
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 1fr 3fr;
 
 
   }
